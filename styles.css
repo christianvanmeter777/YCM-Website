@@ -1,0 +1,593 @@
+/* ================= SIDEBAR ================= */
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #A45DB8;
+    transition: left 0.3s ease;
+    padding-top: 20px;
+    z-index: 999;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    background: #495057;
+}
+
+
+/* ================= TEXT ================= */
+
+.centerText {
+    text-align: center;
+}
+
+.fontstyle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #4B2E5E;
+    font-size: clamp(24px, 2vw, 48px);
+    line-height: 1.6;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.Headerstyle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #4B2E5E;
+    font-size: clamp(40px, 3vw, 70px);
+}
+
+.margintopspace {
+    margin-top: 40px;
+}
+
+
+/* ================= BACKGROUND ================= */
+
+.backgroundC {
+    background-color: #FFF7E8;
+}
+
+
+/* ================= IMAGE ================= */
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.imgsize {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+@media screen and (min-width: 2560px) {
+    .imgsize {
+        height: 1300px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .imgsize {
+        height: 800px;
+    }
+}
+
+
+/* ================= NAVIGATION CIRCLE ================= */
+
+#menuBtn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    background-color: black;
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 26px;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#menuBtn:hover {
+    background-color: #333;
+}
+
+
+/* ================= BUTTON ON IMAGE ================= */
+
+.speak-button {
+    position: absolute;
+
+    left: 32%;
+    top: 91%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: #B66BC9;
+    color: white;
+
+    padding: 14px 45px;
+
+    border-radius: 35px;
+
+    font-family: Arial, sans-serif;
+    font-size: clamp(16px, 1.5vw, 28px);
+    font-weight: bold;
+
+    text-decoration: none;
+
+    box-shadow: 0 6px 0 #754080;
+
+    z-index: 10;
+}
+
+.speak-button:hover {
+    background-color: #A45DB8;
+    color: white;
+    text-decoration: none;
+
+    transform: translate(-50%, -45%);
+}
+
+
+/* ================= LARGE SCREENS ================= */
+
+@media (min-width: 1920px) {
+
+    .fontstyle {
+        font-size: 38px;
+        width: 90%;
+    }
+
+    .Headerstyle {
+        font-size: 65px;
+    }
+
+    /* Keep button below image text */
+    .speak-button {
+        top: 91%;
+        font-size: 28px;
+        padding: 16px 50px;
+    }
+
+    #menuBtn {
+        width: 65px;
+        height: 65px;
+        font-size: 32px;
+        top: 20px;
+        right: 30px;
+    }
+}
+
+
+/* ================= 2560px+ SCREENS ================= */
+
+@media (min-width: 2560px) {
+
+    .fontstyle {
+        font-size: 45px;
+        width: 90%;
+    }
+
+    .Headerstyle {
+        font-size: 75px;
+    }
+
+    /* Don't make the button huge */
+    .speak-button {
+        top: 91%;
+        font-size: 30px;
+        padding: 18px 55px;
+    }
+
+    #menuBtn {
+        width: 75px;
+        height: 75px;
+        font-size: 38px;
+        top: 25px;
+        right: 40px;
+    }
+}
+
+
+/* ================= TABLETS ================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .fontstyle {
+        font-size: 28px;
+        width: 90%;
+    }
+
+    .Headerstyle {
+        font-size: 50px;
+    }
+
+    .speak-button {
+        top: 89%;
+        font-size: 22px;
+        padding: 14px 40px;
+    }
+}
+
+
+/* ================= PHONES ================= */
+
+@media (max-width: 767px) {
+
+    .fontstyle {
+        font-size: 20px;
+        width: 90%;
+        line-height: 1.5;
+    }
+
+    .Headerstyle {
+        font-size: 38px;
+    }
+
+    .speak-button {
+        left: 32%;
+        top: 88%;
+        font-size: 16px;
+        padding: 12px 25px;
+        white-space: nowrap;
+    }
+
+    #menuBtn {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .margintopspace {
+        margin-top: 25px;
+    }
+}
+@media (max-width: 400px) {
+
+    .speak-button {
+        left: 32%;
+        top: 88%;
+
+        font-size: 12px;
+        padding: 8px 16px;
+
+        white-space: nowrap;
+    }
+}
+/* ================= FAMILY SECTION ================= */
+
+.family-section {
+    width: 95%;
+    margin: 80px auto;
+    
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+
+/* Image */
+
+.family-image {
+    width: 55%;
+}
+
+.family-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Text */
+
+.family-text {
+    width: 40%;
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #4B2E5E;
+    
+    font-size: clamp(24px, 2vw, 48px);
+    line-height: 1.6;
+    
+    text-align: center;
+}
+
+
+/* ================= LARGE SCREENS ================= */
+
+@media (min-width: 1920px) {
+
+    .family-section {
+        width: 92%;
+        gap: 5%;
+    }
+
+    .family-image {
+        width: 55%;
+    }
+
+    .family-text {
+        width: 40%;
+        font-size: 38px;
+    }
+}
+
+
+/* ================= 2560px+ ================= */
+
+@media (min-width: 2560px) {
+
+    .family-section {
+        width: 92%;
+    }
+
+    .family-text {
+        font-size: 45px;
+    }
+}
+
+
+/* ================= TABLETS ================= */
+
+@media (max-width: 1199px) {
+
+    .family-section {
+        gap: 4%;
+    }
+
+    .family-text {
+        font-size: 28px;
+    }
+}
+
+
+/* ================= PHONES ================= */
+
+@media (max-width: 767px) {
+
+    .family-section {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 50px auto;
+    }
+
+    .family-image {
+        width: 100%;
+    }
+
+    .family-text {
+        width: 100%;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}/* ================= LETS CONNECT ================= */
+
+.connect-section {
+    width: 100%;
+    height: 450px;
+
+    background-image: url("Images/backgroundfooter.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding-top: 50px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+/* ================= TITLE ================= */
+
+.connect-section h1 {
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+    color: black;
+
+    font-size: clamp(45px, 5vw, 80px);
+
+    margin: 0;
+}
+
+
+/* ================= SOCIAL LINKS ================= */
+
+.social-links {
+    width: 75%;
+    margin: 80px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ================= SOCIAL LINK ================= */
+
+.social-link {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+
+    border-radius: 50%;
+
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+
+/* ================= 1920px+ ================= */
+
+@media (min-width: 1920px) {
+
+    .connect-section {
+        height: 500px;
+        padding-top: 50px;
+    }
+
+    .social-links {
+        width: 75%;
+        margin-top: 100px;
+    }
+
+    .social-link {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+/* ================= 2560px+ ================= */
+
+@media (min-width: 2560px) {
+
+    .connect-section {
+        height: 550px;
+        padding-top: 50px;
+    }
+
+    .social-links {
+        width: 70%;
+        margin-top: 100px;
+    }
+
+    .social-link {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+
+/* ================= TABLET ================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .connect-section {
+        height: 500px;
+        padding-top: 50px;
+    }
+
+    .social-links {
+        width: 80%;
+        margin-top: 80px;
+    }
+
+    .social-link {
+        width: 140px;
+        height: 140px;
+        font-size: 22px;
+    }
+}
+
+
+/* ================= PHONE ================= */
+
+@media (max-width: 767px) {
+
+    .connect-section {
+        height: 500px;
+        padding-top: 40px;
+    }
+
+    .connect-section h1 {
+        font-size: 40px;
+    }
+
+    .social-links {
+        width: 100%;
+        margin-top: 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 5px;
+    }
+
+    .social-link {
+        width: 70px;
+        height: 70px;
+
+        font-size: 20px;
+    }
+}
+/* ================= FORM BUTTON ================= */
+
+.form-button-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.form-button {
+    display: inline-block;
+
+    background-color: #4B2E5E;
+    color: white;
+
+    padding: 20px 55px;
+
+    border-radius: 40px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    box-shadow: 0 6px 0 #321F3F;
+
+    transition: 0.2s;
+}
+
+.form-button:hover {
+    background-color: #5D3A70;
+    color: white;
+    text-decoration: none;
+
+    transform: translateY(-2px);
+}
